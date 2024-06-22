@@ -23,8 +23,6 @@ Le projet gestion stock à pour but de créer une application Windows, une appli
 - L’acquisition de la température et de l’humidité toutes les 4 heures
 - L’archivage des mesures ci-dessus dans la base de données.
 
-> :bulb: Pour plus de renseignements sur le projet consulter le [cahier des charges](docs/cahier_des_charges.pdf).
-
 ## :file_folder: Description des différents dossiers
 
 ### Le dossier `database`
