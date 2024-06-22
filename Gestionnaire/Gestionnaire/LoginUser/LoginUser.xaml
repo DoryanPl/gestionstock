@@ -1,0 +1,34 @@
+﻿<Window x:Class="Gestionnaire.LoginUser.LoginUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestionnaire.LoginUser"
+        mc:Ignorable="d" 
+        WindowState="Normal"
+        WindowStyle="SingleBorderWindow"
+        Title="Connexion" Height="532.8" Width="500" Background="#FF464454"
+        ResizeMode="NoResize" KeyDown="Window_KeyDown" Loaded="Window_Loaded">
+    <Grid Height="500" Margin="0,0,-0.4,3.2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="494" >
+
+
+        <TextBlock x:Name="Cable_lblNom" Margin="54,28,43,428" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="32" Text="Connexion utilisateur" />
+
+        <StackPanel Orientation="Horizontal" Margin="44,124,33,266" >
+            <Image Source="/Gestionnaire;component/Images/user.png" Width="104" Margin="0,0,0,-0.8" Height="96"/>
+            <TextBox x:Name="Settings_txtUser" Text="Username" Background="#FF1D1D25" Foreground="White" FontFamily="Tahoma" FontSize="24" FontWeight="Bold" BorderBrush="{x:Null}" Width="300" RenderTransformOrigin="0.5,0.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,13,0,12.2" GotFocus="Settings_txtUser_GotFocus" LostFocus="Settings_txtUser_LostFocus"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="49,234,33,165" >
+            <Image Source="/Gestionnaire;component/Images/password.png" Width="99" Margin="0,5,0,0.4"/>
+            <PasswordBox x:Name="Settings_txtPassword" Password="Password" Background="#FF1D1D25" Foreground="White" FontFamily="Tahoma" FontSize="24" FontWeight="Bold" BorderBrush="{x:Null}" Width="300" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,19,0,0.4" LostFocus="Settings_txtPassword_LostFocus" GotFocus="Settings_txtPassword_GotFocus" />
+        </StackPanel>
+
+        <Button x:Name="btnConnexion" BorderThickness="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="99" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="93" Background="{x:Null}" Click="btnConnexion_Click" Margin="198,397,0,0">
+            <StackPanel Height="93" Width="99"  >
+                <Image Source="/Gestionnaire;component/Images/checked.png" Height="60" Margin="2,0,0.2,0"/>
+                <TextBlock VerticalAlignment="Center" Height="32" Text=" Valider"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

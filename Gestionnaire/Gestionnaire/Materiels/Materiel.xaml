@@ -1,0 +1,160 @@
+﻿<UserControl x:Class="Gestionnaire.Materiels.Materiel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:Gestionnaire.Materiels"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="1360" Unloaded="UserControl_Unloaded" Loaded="UserControl_Loaded">
+
+
+    <Grid RenderTransformOrigin="0.274,0.24" Margin="-2,-5,2,5" Background="#FF464454" Height="1000" Width="1360" HorizontalAlignment="Center">
+
+
+        <Button x:Name="btnAjouter" BorderThickness="0" HorizontalAlignment="Left" Margin="282,48,0,0" VerticalAlignment="Top" Width="227" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="135" Background="#FF1D1D25" Click="btnAjouter_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="#FF1D1D25">
+                        <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <StackPanel Orientation="Horizontal" Width="217" HorizontalAlignment="Center" Margin="10,24,0.2,19.2">
+                <Image Source="../Images/ajouterb.png" Width="85" HorizontalAlignment="Left"/>
+                <TextBlock Margin="0,32,0,30" Width="121" VerticalAlignment="Center" Height="34" HorizontalAlignment="Center" ><Run Text=" "/><Run Text="Ajouter"/></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="bntDelete" BorderThickness="0" HorizontalAlignment="Left" Margin="545,48,0,0" VerticalAlignment="Top" Width="215" FontFamily="Century Gothic" FontWeight="Bold" FontSize="25" Foreground="White" Height="135" Background="#FF1D1D25" Click="bntDelete_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="#FF1D1D25">
+                        <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <StackPanel Orientation="Horizontal" Width="215" HorizontalAlignment="Center" Margin="0,24,0.2,19.2">
+                <Image Source="../Images/supprimerb.png" Width="75" HorizontalAlignment="Left" Margin="0,6,0,4"/>
+                <TextBlock Margin="0,30,0,28" Width="134" VerticalAlignment="Center" Height="34" HorizontalAlignment="Center" Text="Supprimer"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnQrCode" BorderThickness="0" HorizontalAlignment="Left" Margin="814,49,0,0" VerticalAlignment="Top" Width="215" FontFamily="Century Gothic" FontWeight="Bold" FontSize="25" Foreground="White" Height="135" Background="#FF1D1D25" Click="btnQrCode_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="#FF1D1D25">
+                        <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <StackPanel Orientation="Horizontal" Width="205" HorizontalAlignment="Center" Margin="10,24,0.2,19.2">
+                <Image Source="../Images/QRCode.png" Width="81" HorizontalAlignment="Left" Margin="0,6,0,4"/>
+                <TextBlock Margin="0,30,0,28" Width="134" VerticalAlignment="Center" Height="34" HorizontalAlignment="Center" Text="  QrCode"/>
+            </StackPanel>
+        </Button>
+
+        <TextBox x:Name="searchTextBox" Margin="444.4,256,518,704" BorderThickness="0" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Background="#FF1D1D25" Foreground="White" KeyDown="searchTextBox_KeyDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" >
+
+
+        </TextBox>
+
+        <Button x:Name="btnSearch" BorderThickness="0" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Background="#FF1D1D25" Click="searchButton_Click" Margin="844,256,460,704" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="#FF1D1D25">
+                        <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Icon:PackIconMaterial Kind="NoteSearch" Style="{StaticResource gridButtonIcon}" Width="35" Height="36" Margin="10,2,0,2"/>
+
+        </Button>
+
+
+
+        <DataGrid VirtualizingPanel.IsVirtualizing="False" Margin="61.4,327,59,87"  x:Name="ListMateriels"  RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Style="{DynamicResource DataGridStyle1}" Grid.Column="1" HorizontalAlignment="Center" >
+
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn x:Name="CheckBoxColumn" CanUserResize="False" ElementStyle="{StaticResource CheckBoxStyle1}" Width="100">
+                    <DataGridCheckBoxColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <CheckBox Style="{StaticResource CheckBoxStyle1}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" />
+                        </DataTemplate>
+                    </DataGridCheckBoxColumn.HeaderTemplate>
+                </DataGridCheckBoxColumn>
+
+                <DataGridTemplateColumn Header="Réference" IsReadOnly="True"  CanUserResize="False" SortMemberPath="Reference" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border Background="Transparent">
+                                <TextBlock Text="{Binding Reference}"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Catégorie" IsReadOnly="True" CanUserResize="False" SortMemberPath="Categorie" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border Background="Transparent">
+                                <TextBlock Text="{Binding Categorie}"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Prix HT" IsReadOnly="True" CanUserResize="False" SortMemberPath="Prix_ht" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border Background="Transparent">
+                                <TextBlock Text="{Binding Prix_ht, StringFormat='€ {0}'}"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="QrCode" IsReadOnly="True" CanUserResize="False" Width="*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button  HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="FlashCodeButton" Style="{StaticResource gridEditButton}" Click="FlashCodeButton_Click">
+                                <Icon:PackIconMaterial Kind="Qrcode" Style="{StaticResource gridButtonIcon}"/>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn IsReadOnly="True" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="EditButton" Style="{StaticResource gridEditButton}" Click="EditButton_Click">
+                                    <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource gridButtonIcon}"/>
+
+                                </Button>
+                                <Button x:Name="DeleteButton" Style="{StaticResource gridRemoveButton}" Margin="5 0 0 0" Click="DeleteButton_Click">
+                                    <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource gridButtonIcon}"/>
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button x:Name="btnReload" BorderThickness="0" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Background="#FF1D1D25" Margin="1271,331,40,629" Click="btnReload_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="#FF1D1D25">
+                        <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Icon:PackIconMaterial Kind="Reload" Style="{StaticResource gridButtonIcon}" Width="35" Height="36" Margin="10,2,0,2"/>
+
+        </Button>
+
+
+    </Grid>
+</UserControl>

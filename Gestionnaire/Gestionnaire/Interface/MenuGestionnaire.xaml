@@ -1,0 +1,62 @@
+﻿<Window x:Class="Gestionnaire.Interface.MenuGestionnaire"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestionnaire.Interface"
+        mc:Ignorable="d"
+        WindowState="Normal"
+        Title="MenuGestionnaire"
+        WindowStyle="SingleBorderWindow" Height="1000" Width="1600"
+        ResizeMode="NoResize" Loaded="Window_Loaded">
+
+    <Grid Margin="0,0,3.4,0.2">
+        <StackPanel HorizontalAlignment="Left" Height="992" DockPanel.Dock="Left" VerticalAlignment="Center" Width="240" Background="#FF1D1D25" Margin="-2,-18,0,-3.8"/>
+
+        <Button x:Name="btnSetting" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="57" Background="#FF1D1D25" Margin="8,2,0,0" Click="btnSetting_Click">
+            <StackPanel Orientation="Horizontal" Height="47" Width="58" HorizontalAlignment="Center">
+                <Image Source="../Images/Settings.png" Width="61" Margin="0,0,0,0.2"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnDisconnect" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="47" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="53" Background="#FF1D1D25" Margin="168,6,0,0" Click="btnDisconnect_Click">
+            <StackPanel Orientation="Horizontal" Height="43" Width="56" HorizontalAlignment="Center">
+                <Image Source="../Images/Disconnect.png" Width="53" Margin="0,0,0,2.2" RenderTransformOrigin="0.658,0.502"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnUserSettings" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="49" Background="#FF1D1D25" Margin="86,10,0,0" Click="btnUserSettings_Click">
+            <StackPanel Orientation="Horizontal" Height="49" Width="55" HorizontalAlignment="Center">
+                <Image Source="../Images/user_settings.png" Width="59" Margin="0,0,0,0.4" VerticalAlignment="Center" Height="46"/>
+            </StackPanel>
+        </Button>
+
+        <StackPanel Orientation="Horizontal" Width="189" HorizontalAlignment="Center" Margin="19,78,1382.2,820.2">
+            <Ellipse x:Name="Led" Width="25" Height="25" Stroke="white" StrokeThickness="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,10,10,9.7"/>
+            <TextBlock x:Name="txtConnected" Margin="0,2,0,0.2" Width="143" Height="69" Foreground="White" FontWeight="Bold" FontFamily="Century Gothic" TextAlignment="Center" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <Button x:Name="btnMateriel" BorderThickness="0" HorizontalAlignment="Left" Margin="0,736,0,0" VerticalAlignment="Top" Width="238" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="149" Background="#FF1D1D25" Click="btnMateriel_Click">
+            <StackPanel Orientation="Horizontal" Height="96" Width="212" HorizontalAlignment="Center">
+                <Image Source="../Images/materiel.png" Width="85" HorizontalAlignment="Left" Margin="0,0,0,0.2"/>
+                <TextBlock Margin="0,40,0,29" Width="121" VerticalAlignment="Center" Height="27" ><Run Text=" "/><Run Text="Matériel"/></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnEmploye" BorderThickness="0" HorizontalAlignment="Left" Margin="0,446,0,0" VerticalAlignment="Top" Width="238" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="149" Background="#FF1D1D25" Click="btnEmploye_Click">
+            <StackPanel Orientation="Horizontal" Height="96" Width="212" HorizontalAlignment="Center">
+                <Image Source="../Images/Employe.png" Width="85" HorizontalAlignment="Left" Margin="0,0,0,0.2"/>
+                <TextBlock Margin="0,40,0,10" Width="121" VerticalAlignment="Center" Height="46" Text=" Employé" />
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnClient" BorderThickness="0" HorizontalAlignment="Left" Margin="0,172,0,0" VerticalAlignment="Top" Width="238" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="149" Background="#FF1D1D25" Click="btnClient_Click">
+            <StackPanel Orientation="Horizontal" Height="96" Width="212" HorizontalAlignment="Center">
+                <Image Source="../Images/Client.png" Width="85" HorizontalAlignment="Left" Margin="0,0,0,0.2"/>
+                <TextBlock Margin="0,40,0,29" Width="121" VerticalAlignment="Center" Height="27" ><Run Text=" "/><Run Text=" Client"/></TextBlock>
+            </StackPanel>
+        </Button>
+        <StackPanel x:Name="PanelAfficher" Margin="233,0,-4.4,-0.2" Background="#FF464454" HorizontalAlignment="Left" Height="1000" Width="1360"/>
+
+    </Grid>
+</Window>

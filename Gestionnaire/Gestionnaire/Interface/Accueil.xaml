@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Gestionnaire.Interface.Accueil"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gestionnaire.Interface"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="1360">
+    <Grid RenderTransformOrigin="0.274,0.24" Margin="-2,-5,2,5" Background="#FF464454" Height="1000" Width="1360" HorizontalAlignment="Center">
+        <Image Source="../Images/Audiotech.png" HorizontalAlignment="Left" Height="220" Margin="214,49,0,0" VerticalAlignment="Top" Width="1003"/>
+        <TextBlock Margin="418,305,345,86" VerticalAlignment="Center" Height="609" FontFamily="Century Gothic" FontSize="150" Foreground="White" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" ><Run Text="Gestion "/><LineBreak/><Run Text="de"/><LineBreak/><Run Text="stoc"/><Run Text="k"/></TextBlock>
+
+
+    </Grid>
+</UserControl>

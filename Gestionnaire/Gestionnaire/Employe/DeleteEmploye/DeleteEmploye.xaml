@@ -1,0 +1,26 @@
+﻿<Window x:Class="Gestionnaire.Employe.DeleteEmploye.DeleteEmploye"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestionnaire.Employe.DeleteEmploye"
+        mc:Ignorable="d"
+        WindowStyle="SingleBorderWindow"
+        Title="SupprimerEmploye" Height="187.268" Width="673.936" Background="#FF1D1D25">
+
+    <Grid>
+        <TextBlock x:Name="lblNom" Height="44" Margin="7,40,3.2,78.4" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="24" ><Run Text="Voulez-vous supprimer définitivement cet employ"/><Run Language="fr-fr" Text="é"/><Run Text=" ?"/></TextBlock>
+
+        <Button x:Name="btnOui" BorderThickness="2" Margin="77,97,375.2,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="#FFF1DDDD" Height="37" Background="#FF303046" BorderBrush="White" Click="btnOui_Click"  >
+            <StackPanel Height="32" Width="73" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock VerticalAlignment="Center" Height="30" Text="Oui" Margin="13,0,7.8,0" />
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnNon" BorderThickness="2" Margin="381,97,71.2,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="#FFF1DDDD" Height="37" Background="#FF303046" BorderBrush="White" Click="btnNon_Click"  >
+            <StackPanel Height="32" Width="73" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock VerticalAlignment="Center" Height="30" Text="Non" Margin="13,0,7.8,0" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

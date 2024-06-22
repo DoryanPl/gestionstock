@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Gestionnaire.BDD.GestionStockBDD_Connexion">
+    <Position X="5" Y="4" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAEAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BDD\BDD_Connexion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gestionnaire.BDD.GestionStockBDD">
+    <Position X="0.5" Y="2.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAEAAQAEAAAAIIAAAAAAAAgAIAABAYAAAAEDgABIEBA=</HashCode>
+      <FileName>BDD\GestionStockBDD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gestionnaire.Materiels.UnMateriel">
+    <Position X="9.5" Y="0.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>EAAAARCAAAAAgAAgAAAAoAAAAIAAAIAAAACAAAAAAAE=</HashCode>
+      <FileName>Materiels\UnMateriel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gestionnaire.Materiels.QrCode">
+    <Position X="13.75" Y="6.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAEQQAAAAAAAgAAAABAAIAAAACAAACAIAAQAAAAAEA=</HashCode>
+      <FileName>Materiels\QrCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gestionnaire.Employe.UnEmploye">
+    <Position X="13.75" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAAgAAAAIACAACAgoAACIKAAAgCAAQA=</HashCode>
+      <FileName>Employe\UnEmploye.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gestionnaire.Client.UnClient">
+    <Position X="17.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IABgAAAAQgAAAAIAICACAAAgAAAAgAAAAAABAgAAIQI=</HashCode>
+      <FileName>Client\UnClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gestionnaire.Interface.MenuGestionnaire">
+    <Position X="5.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAgAABAgAAAAAAgAwAAABAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Interface\MenuGestionnaire.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Gestionnaire.Materiels.Materiel">
+    <Position X="1.25" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAJAAAAgEABEQEgAAgJEAABAAAAAQEAAAAoAAAA=</HashCode>
+      <FileName>Materiels\Materiel.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Gestionnaire.LoginUser.LoginUser">
+    <Position X="8" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAAEAAAAAAAAAAAgiAAAAAAAAACAAAAAAAgAE=</HashCode>
+      <FileName>LoginUser\LoginUser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Gestionnaire.Materiels.DeleteMateriel.DeleteMaterielEmpty">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Materiels\DeleteMateriel\DeleteMaterielEmpty.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Gestionnaire.Materiels.DeleteMateriel.ConfirmDelete">
+    <Position X="10.25" Y="4.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEAAAQAAA=</HashCode>
+      <FileName>Materiels\DeleteMateriel\ConfirmDelete.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Gestionnaire.Materiels.ModifierMateriel.ModifierMateriel">
+    <Position X="8.25" Y="4.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAACIhCAAAAAAAAgAAAAAJAAAIAAAAAAABCAAAAQAAA=</HashCode>
+      <FileName>Materiels\ModifierMateriel\ModifierMateriel.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Gestionnaire.Employe.Employe">
+    <Position X="6" Y="3.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAJAAAAgAABEAAgAAgJEAABAAAAAQEAAAAoAAAA=</HashCode>
+      <FileName>Employe\Employe.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

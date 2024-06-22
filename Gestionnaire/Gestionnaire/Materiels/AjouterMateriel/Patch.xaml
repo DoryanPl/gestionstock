@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="Gestionnaire.Materiels.AjouterMateriel.Patch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gestionnaire.Materiels.AjouterMateriel"
+            mc:Ignorable="d" Height="501.2" Width="921.5">
+    <Grid HorizontalAlignment="Left" Width="912" Height="545" VerticalAlignment="Top" Margin="0,-44,0,-0.2" Background="#FF464454">
+
+        <TextBlock Text="Nouveau Patch" Height="44" Margin="10,10,0,491" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="40" />
+
+        <StackPanel Margin="31,81,618,318">
+            <TextBlock x:Name="Patch_lblNom" Text="Nom" Height="44" Margin="0,0,10.2,0" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="24" />
+            <TextBox x:Name="Patch_txtNom" Text="" Height="57" Margin="0,0,0.2,0" Background="#FF1D1D25" Foreground="White" FontFamily="Tahoma" FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}" TextAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="Patch_txtNom_PreviewTextInput" />
+        </StackPanel>
+
+        <StackPanel Margin="335,81,314,318">
+            <TextBlock x:Name="Patch_lbPrix" Text="Prix" Height="44" Margin="0,0,10.2,0" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="24" />
+            <TextBox x:Name="Patch_txtPrix" Text="" Height="57" Margin="0,0,0.2,0" Background="#FF1D1D25" Foreground="White" FontFamily="Tahoma" FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}" TextAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="Patch_txtPrix_PreviewTextInput" />
+        </StackPanel>
+
+        <StackPanel Margin="632,81,17,318">
+            <TextBlock x:Name="Patch_lblFlashCode" Text="Flashcode" Height="44" Margin="0,0,10.2,0" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="24" />
+            <TextBox x:Name="Patch_txtFlashCode" Text="" Height="57" Margin="0,0,0.2,0" Background="#FF1D1D25" Foreground="White" FontFamily="Tahoma" FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}" TextAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="Patch_txtFlashCode_PreviewTextInput" />
+        </StackPanel>
+
+        <StackPanel Margin="183,200,466,199">
+            <TextBlock x:Name="Patch_lblIN" Text="IN" Height="44" Margin="0,0,10.2,0" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="24" />
+            <TextBox x:Name="Patch_txtIN" Text="" Height="57" Margin="0,0,0.2,0" Background="#FF1D1D25" Foreground="White" FontFamily="Tahoma" FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}" TextAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="Patch_txtIN_PreviewTextInput" />
+        </StackPanel>
+
+        <StackPanel Margin="488,200,161,199">
+            <TextBlock x:Name="Patch_lblOUT" Text="OUT" Height="44" Margin="0,0,10.2,0" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="24" />
+            <TextBox x:Name="Patch_txtOUT" Text="" Height="57" Margin="0,0,0.2,0" Background="#FF1D1D25" Foreground="White" FontFamily="Tahoma" FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}" TextAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="Patch_txtOUT_PreviewTextInput" />
+        </StackPanel>
+
+
+        <StackPanel Margin="187,328,462,119">
+            <TextBlock x:Name="Patch_lblDANTE" Text="DANTE" Height="44" Margin="0,0,10.2,0" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="24" />
+            <TextBox x:Name="Patch_txtDANTE" Text="" Height="57" Margin="0,0,0.2,0" Background="#FF1D1D25" Foreground="White" FontFamily="Tahoma" FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}" TextAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="Patch_txtDANTE_PreviewTextInput" />
+        </StackPanel>
+
+        <StackPanel Margin="528,347,210,114">
+            <Label Content="Livrer :" VerticalAlignment="Center" Foreground="White" FontFamily="Tahoma" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" Margin="0,0,0.4,0"/>
+            <ComboBox x:Name="comboLivrer" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="172" FontFamily="Tahoma" FontSize="16" FontWeight="Bold" Height="25" BorderBrush="#FFD6A8A8" Background="#FF400606" TextOptions.TextHintingMode="Animated" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" >
+                <ComboBoxItem Content="Oui"/>
+                <ComboBoxItem Content="Non"/>
+            </ComboBox>
+        </StackPanel>
+
+        <Button x:Name="btnPatch" BorderThickness="0" HorizontalAlignment="Left" Margin="413,445,0,0" VerticalAlignment="Top" Width="113" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="White" Height="92" Background="{x:Null}" Click="btnPatch_Click">
+            <StackPanel Height="92" Width="112"  >
+                <Image Source="../../Images/Check.png" VerticalAlignment="Center" Height="59"/>
+                <TextBlock  Width="97" VerticalAlignment="Center" Height="32" Text=" Valider" Margin="4,0,11,0" />
+            </StackPanel>
+        </Button>
+
+      
+    </Grid>
+</UserControl>

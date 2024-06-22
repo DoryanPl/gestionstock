@@ -1,0 +1,20 @@
+﻿<Window x:Class="Gestionnaire.Interface.SuccessDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestionnaire.Interface"
+        WindowStyle="SingleBorderWindow"
+        mc:Ignorable="d"
+        Title="Succès" Height="192.068" Width="453.736" Background="#FF1D1D25">
+    <Grid>
+
+        <TextBlock x:Name="Cable_lblNom" Text="Connexion réussite ! " Height="44" Margin="6,43,4.2,75.4" TextAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFCFCFC" FontSize="24" />
+
+        <Button x:Name="btnOk" BorderThickness="2" Margin="157,95,155.2,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontWeight="Bold" FontSize="26" Foreground="#FFF1DDDD" Height="37" Background="#FF303046" BorderBrush="White" Click="btnOk_Click">
+            <StackPanel Height="33" Width="47"  >
+                <TextBlock VerticalAlignment="Center" Height="30" Text="Ok" Margin="4,0,3.2,0" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
